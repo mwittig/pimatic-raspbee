@@ -69,6 +69,7 @@ module.exports = (env) ->
         @connect()
 
     scan:() =>
+      env.logger.debug(devices)
       @Connector.getSensor().then((devices)=>
         for i of devices
           dev=devices[i]
